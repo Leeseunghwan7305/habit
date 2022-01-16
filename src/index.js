@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import firebaseApp from "./service/firebase";
 import AuthService from "./service/auth_service";
-const authService = new AuthService();
+const authService = new AuthService(firebaseApp);
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
