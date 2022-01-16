@@ -21,11 +21,9 @@ function App({ authService }) {
   let [input, setinput] = useState("");
   return (
     <div className="App">
-      <div className="main-page">
-        <Routes>
-          <Route path="/" element={<Login authService={authService} />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Login authService={authService} />} />
+      </Routes>
       <Routes>
         <Route
           path="/main"
